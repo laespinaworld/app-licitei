@@ -12,11 +12,12 @@ import {
   createStyles,
   Group, Code, ScrollArea,
 } from '@mantine/core';
+import LightDarkModeButton from './LightDarkButton';
 import { useColorScheme } from '@mantine/hooks';
 import Image from 'next/image';
 import { LinksGroup } from './NavbarLinksGroup'
 import { UserButton } from './UserButton'
-import LightDarkModeButton from './LightDarkButton';
+
 import {
   IconSun,
   IconMoonStars,
@@ -28,6 +29,7 @@ import {
   IconAdjustments,
   IconLock,
 } from '@tabler/icons';
+
 
 const mockdata = [
   { label: 'Dashboard', icon: IconGauge },
@@ -75,7 +77,6 @@ const useStyles = createStyles((theme) => ({
   header: {
     padding: theme.spacing.md,
     paddingTop: 0,
-  
     marginLeft: -theme.spacing.md,
     marginRight: -theme.spacing.md,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
@@ -102,12 +103,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 
-
- function LiciteiLayout({children}) {
-
-  const { classes } = useStyles();
-  const links = mockdata.map((item) => <LinksGroup {...item} key={item.label} />);
-
+export default function AppShellDemo() {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   return (
@@ -116,23 +112,12 @@ const useStyles = createStyles((theme) => ({
         main: {
           background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
         },
-        
       }}
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
       navbar={
-        <Navbar  p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
-         <Navbar.Section grow className={classes.links} component={ScrollArea}>
-        <div className={classes.linksInner}>{links}</div>
-      </Navbar.Section>
-
-      <Navbar.Section className={classes.footer}>
-        <UserButton
-          image="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=255&q=80"
-          name="Ann Nullpointer"
-          email="anullpointer@yahoo.com"
-        />
-      </Navbar.Section>
+        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
+          <Text>Application navbar</Text>
         </Navbar>
       }
       aside={
@@ -143,13 +128,13 @@ const useStyles = createStyles((theme) => ({
         </MediaQuery>
       }
       footer={
-        <Footer  height={60} p="md" >
-          <Text>Haxn Empreendimentos Ltda - 40.030.641/0001-03. Todos os direitos reservados. </Text>
+        <Footer height={60} p="md">
+          Application footer
         </Footer>
       }
       header={
-        <Header  height={{ base: 50, md: 70 }} p="md">
-          <div  style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+        <Header height={{ base: 50, md: 70 }} p="md">
+          <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
                 opened={opened}
@@ -160,21 +145,12 @@ const useStyles = createStyles((theme) => ({
               />
             </MediaQuery>
 
-             <Group position="apart" spacing='xl'>
-              <Image
-              width={150}
-              height={150}
-              alt='logo licitei'
-              src='/logo.svg'/>
-              <LightDarkModeButton/>
-             </Group>
-            
+            <Text>Application header</Text>
           </div>
         </Header>
       }
     >
-      {children}
+      <Text>Resize app to see responsive navbar in action</Text>
     </AppShell>
   );
 }
-export default LiciteiLayout;

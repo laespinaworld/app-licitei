@@ -3,7 +3,7 @@ import { ActionIcon, MantineProvider, ColorSchemeProvider, ColorScheme, Paper } 
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useHotkeys, useLocalStorage } from '@mantine/hooks';
-import { LiciteiLayout } from '../components/AppShell';
+import  LiciteiLayout  from '../components/AppShell';
 
 
 
