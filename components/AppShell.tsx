@@ -48,12 +48,11 @@ const mockdata = [
     links: [
       { label: 'Mercado', link: '/' },
       { label: 'Concorrência', link: '/' },
-      { label: 'Releases schedule', link: '/' },
+      { label: 'Risco de Pagamento', link: '/' },
     ],
   },
   { label: 'Monitorar Chat', icon: IconPresentationAnalytics },
   { label: 'Juridico', icon: IconFileAnalytics },
-  { label: 'Comunidade', icon: IconAdjustments },
   {
     label: 'Departamento Online',
     icon: IconLock,
@@ -61,8 +60,12 @@ const mockdata = [
       { label: 'Gerenciamento', link: '/' },
       { label: 'Emissor de Declarações', link: '/' },
       { label: 'Documentos', link: '/' },
+      { label: 'Ata Place', link: '/' },
+      { label: 'Dincita - Antecipação', link: '/' },
+      
     ],
   },
+  { label: 'Comunidade', icon: IconAdjustments },
   { label: 'Configurações', icon: IconAdjustments },
 ];
 
