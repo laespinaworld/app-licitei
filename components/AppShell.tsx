@@ -129,8 +129,8 @@ const useStyles = createStyles((theme) => ({
       <Navbar.Section className={classes.footer}>
         <UserButton
           image="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=255&q=80"
-          name="Ann Nullpointer"
-          email="anullpointer@yahoo.com"
+          name="Areth Alves"
+          email="Aretha@haxn.com.br"
         />
       </Navbar.Section>
         </Navbar>
@@ -138,13 +138,13 @@ const useStyles = createStyles((theme) => ({
       aside={
         <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 300 }}>
-            <Text>Application sidebar</Text>
+            <Text>Side bar</Text>
           </Aside>
         </MediaQuery>
       }
       footer={
         <Footer  height={60} p="md" >
-          <Text>Haxn Empreendimentos Ltda - 40.030.641/0001-03. Todos os direitos reservados. </Text>
+          <Text >Haxn Empreendimentos Ltda - 40.030.641/0001-03. Todos os direitos reservados. </Text>
         </Footer>
       }
       header={
